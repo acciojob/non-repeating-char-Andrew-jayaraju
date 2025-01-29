@@ -1,11 +1,13 @@
 function firstNonRepeatedChar(str) {
  // Write your code here
-	for(let i=1; i<str.length-1; i++){
-        if(str.charAt(i) != str.charAt(i-1) && str.charAt(i) != str.charAt(i+1)){
+	for (let i = 0; i < str.length; i++) {
+        // Check if the current character is not repeated
+        if (str.charAt(i) !== str.charAt(i - 1) && str.charAt(i) !== str.charAt(i + 1)) {
             return str.charAt(i);
         }
     }
-    return str.charAt(str.length);
+    // If no non-repeated character is found, return null or another appropriate value
+    return null;
 }
 const input = prompt("Enter a string");
 alert(firstNonRepeatedChar(input)); 
